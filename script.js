@@ -3,7 +3,9 @@ const gameOver = document.getElementById("game-over-container")
 const wonContainer = document.getElementById("won-container");
 const finalScore = document.getElementById("final-score");
 const scoreCount = document.getElementById("score-count")
-
+const tutorialElement = document.getElementById("tutorial");
+const containerElement = document.getElementById("container")
+const openTutorialBtn = document.getElementById("open-tutorial")
 let grid;
 let score;
 
@@ -12,17 +14,19 @@ let touchStartY;
 let touchEndX;
 let touchEndY;
 
-document.addEventListener("touchstart", (e) => {
+function touchStart(e) {
   touchStartX = e.touches[0].screenX;
   touchStartY = e.touches[0].screenY;
-})
+}
 
-document.addEventListener("touchend", (e) => {
+function touchEnd(e) {
   touchEndX = e.changedTouches[0].screenX;
   touchEndY = e.changedTouches[0].screenY;
-  
   handleTouch();
-})
+}
+
+document.addEventListener("touchstart", touchStart)
+document.addEventListener("touchend", touchEnd)
 
 function startGame() {
   grid = Array(4).fill().map(() => Array(4).fill(0))
@@ -192,9 +196,28 @@ function isGameOver() {
   return true;
 }
 
+function closeTutorial() {
+  tutorialElement.style.display = 'none';
+  containerElement.style.display = 'flex';
+  openTutorialBtn.style.display = 'block'
+  
+  document.addEventListener("touchstart", touchStart)
+  document.addEventListener("touchend", touchEnd)
+  
+}
+
+function openTutorial() {
+  tutorialElement.style.display = 'block';
+  containerElement.style.display = 'none';
+  openTutorialBtn.style.display = 'none';
+  document.removeEventListener("touchstart", touchStart)
+  document.removeEventListener("touchend", touchEnd)
+  
+}
+
 function restartGame() {
-  gameOver.style.visibility = 'hidden'
-  wonContainer.style.visibility = 'hidden'
+  gameOver.style.display = 'none'
+  wonContainer.style.display = 'none'
   startGame();
 }
 startGame()
