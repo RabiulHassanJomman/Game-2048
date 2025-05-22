@@ -1,0 +1,95 @@
+body {
+    font-size: 15pt;
+    margin: 0;
+    font-family: sans-serif;
+}
+h1{
+    font-size: 80px;
+    color: #776e65;
+}
+#score{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #776e65;
+}
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game-container {
+    background-color: #bbada0;
+    height: 380px;
+    width: 380px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.tile {
+    height: 80px;
+    width: 80px;
+    background: #cdc1b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #776e65;
+}
+
+#game-over-container{
+    position: absolute ;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 200px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#game-over{
+    color: red;
+}
+
+#final-score{
+    color: white;
+}
+
+#restart-btn>button{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.tile-2 { background-color: #eee4da; }
+.tile-4 { background-color: #ede0c8; }
+.tile-8 { background-color: #f2b179; }
+.tile-16 { background-color: #f59563; }
+.tile-32 { background-color: #f67c5f; }
+.tile-64 { background-color: #f65e3b; }
+.tile-128 { background-color: #edcf72; }
+.tile-256 { background-color: #edcc61; }
+.tile-512 { background-color: #edc850; }
+.tile-1024 { background-color: #edc53f; }
+.tile-2048 { background-color: #edc22e; }
