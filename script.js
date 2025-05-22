@@ -136,7 +136,7 @@ function move(direction) {
       }
     }
   }
-  
+  addRandomTile();
   return moved;
 }
 
@@ -157,7 +157,7 @@ function handleTouch() {
     else if (diffY < -30)
       move("down");
   }
-  addRandomTile();
+  
   updateGrid();
 }
 
