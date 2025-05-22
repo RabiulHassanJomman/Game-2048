@@ -1,15 +1,22 @@
+html, body {
+  overscroll-behavior-y: none;
+}
+
 body {
     font-family: sans-serif;
 }
-#heading{
+
+#heading {
     font-size: 80px;
     color: #776e65;
 }
-#score{
+
+#score {
     font-size: 30px;
     margin-bottom: 20px;
     color: #776e65;
 }
+
 #container {
     display: flex;
     align-items: center;
@@ -48,15 +55,16 @@ body {
     color: #776e65;
 }
 
-#game-over-container, #won-container{
-    position: absolute ;
+#game-over-container,
+#won-container {
+    position: absolute;
     visibility: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 150px;
     width: 200px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -66,31 +74,44 @@ body {
     font-size: 30px;
 }
 
-#game-over{
-    color: red;
+#game-over {
+    color: darkred;
 }
 
-#final-score{
-    color: white;
+#final-score {
+    color: color: #776e65; !important;
 }
 
-#won-container{
+#won-container {
     background: rgba(255, 255, 255, 0.8);
     color: #776e65;
 }
 
-#restart-btn>button{
+#game-over-container {
+    height: auto;
+    width: 200px;
     padding: 10px;
-    border-radius: 5px;
-    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #776e65;
 }
-#tutorial{
+
+#restart-btn {
+    
+    background: wheat;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    left: 30%;
+}
+
+#tutorial {
     position: absolute;
     padding: 5px 10px 100px 10px;
     display: none;
 }
 
-#close-tutorial, #open-tutorial{
+#close-tutorial,
+#open-tutorial {
     position: absolute;
     background: wheat;
     padding: 15px;
@@ -98,13 +119,14 @@ body {
     border: none;
     left: 40%;
 }
-#open-tutorial{
+
+#open-tutorial {
     position: absolute;
     left: 70%;
     width: 100px;
 }
 
-ol{
+ol {
     font-size: 15px;
 }
 
@@ -113,14 +135,46 @@ li>span {
     font-weight: bold;
 }
 
-.tile-2 { background-color: #eee4da; }
-.tile-4 { background-color: #ede0c8; }
-.tile-8 { background-color: #f2b179; }
-.tile-16 { background-color: #f59563; }
-.tile-32 { background-color: #f67c5f; }
-.tile-64 { background-color: #f65e3b; }
-.tile-128 { background-color: #edcf72; }
-.tile-256 { background-color: #edcc61; }
-.tile-512 { background-color: #edc850; }
-.tile-1024 { background-color: #edc53f; }
-.tile-2048 { background-color: #edc22e; }
+.tile-2 {
+    background-color: #eee4da;
+}
+
+.tile-4 {
+    background-color: #ede0c8;
+}
+
+.tile-8 {
+    background-color: #f2b179;
+}
+
+.tile-16 {
+    background-color: #f59563;
+}
+
+.tile-32 {
+    background-color: #f67c5f;
+}
+
+.tile-64 {
+    background-color: #f65e3b;
+}
+
+.tile-128 {
+    background-color: #edcf72;
+}
+
+.tile-256 {
+    background-color: #edcc61;
+}
+
+.tile-512 {
+    background-color: #edc850;
+}
+
+.tile-1024 {
+    background-color: #edc53f;
+}
+
+.tile-2048 {
+    background-color: #edc22e;
+}
