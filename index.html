@@ -11,10 +11,69 @@
   <title>2048</title>
   
   <!-- Custom Styles -->
+  <style type="text/css" media="all">
+  
+  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  
+  <button type="submit" onclick="openTutorial()" id="open-tutorial">Tutorial</button>
+  <div id="tutorial" style="text-align: justify; margin: 10px;">
+    <h1>How to Play 2048:</h1>
+    <h5>
+      Welcome to 2048, a fun and addictive puzzle game where you combine numbered tiles to reach the coveted 2048 tile! This tutorial will walk you through the basics of playing the game, whether you’re on a computer or a mobile device.
+    </h5>
+    
+    <ol style="list-style-type: none;">
+      <li>
+        <h2>1. Objectives:</h2> The goal of 2048 is to create a tile with the number 2048 by sliding and merging tiles on a 4x4 grid. You win when you achieve this, but you can keep playing to reach even higher numbers if you’d like!
+        
+      </li>
+      <li>
+        <h2>2. Game Setup:</h2>
+        <ul style="list-style-type: disc;">
+          <li>
+            Grid: The game starts with a 4x4 grid (16 cells).
+          </li>
+          <li>
+            Starting Tiles: Two tiles, each with a value of either 2 or 4, appear on the grid.
+          </li>
+          <li>
+            Score: Your score starts at 0 and increases as you merge tiles.Score: Your score starts at 0 and increases as you merge tiles.
+          </li>
+        </ul>
+        
+      </li>
+      <li>
+        <h2>3. How to Play</h2> 2048 is simple to play but challenging to master. Here’s how to make moves:
+        <ul>
+          <li>
+            <h3>Controls on a Computer:</h3> Use the arrow keys (⬅️ Left, ➡️ Right, ⬆️ Up, ⬇️ Down) to slide the tiles in the desired direction.
+          </li>
+          <li>
+            <h3>Controls on a Mobile Device: </h3>Swipe on the screen in the direction you want the tiles to move (swipe left, right, up, or down).
+          </li>
+          <li>
+            <h3>Slide Tiles:</h3>When you press an arrow key or swipe, all tiles on the grid slide as far as possible in that direction.For example, if you press the left arrow key, all tiles move to the left side of the grid
+          </li>
+          <li>
+            <h3>Merge Tiles:</h3>If two tiles with the same number touch while sliding, they merge into a single tile with double the value.Example: If two tiles with the number 2 collide, they merge into a single tile with the number 4.The new tile’s value is added to your score.
+          </li>
+          <li>
+            <h3>New Tile:</h3>After each move, a new tile (either a 2 or 4) appears in a random empty spot on the grid.
+            <br />
+            <span style="color: darkred">Note:</span> A new tile only appears if your move caused at least one tile to slide or merge.
+          </li>
+        </ul>
+      <li>
+        <h3>4. Game Over: </h3>The game ends when the grid is completely filled (no empty cells) and there are no possible merges (no adjacent tiles with the same number).When this happens, you’ll see a “Game Over!” message with a Restart button.Tap or click the Restart button to start a new game.
+      </li>
+      </li>
+    </ol>
+    <button onclick="closeTutorial()" id="close-tutorial">Close</button>
+  </div>
   <div id="container">
     <h1 id="heading">2048</h1>
     
@@ -43,7 +102,7 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
