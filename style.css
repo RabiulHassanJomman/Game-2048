@@ -1,9 +1,7 @@
 body {
-    font-size: 15pt;
-    margin: 0;
     font-family: sans-serif;
 }
-h1{
+#heading{
     font-size: 80px;
     color: #776e65;
 }
@@ -85,6 +83,34 @@ h1{
     padding: 10px;
     border-radius: 5px;
     outline: none;
+}
+#tutorial{
+    position: absolute;
+    padding: 5px 10px 100px 10px;
+    display: none;
+}
+
+#close-tutorial, #open-tutorial{
+    position: absolute;
+    background: wheat;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    left: 40%;
+}
+#open-tutorial{
+    position: absolute;
+    left: 70%;
+    width: 100px;
+}
+
+ol{
+    font-size: 15px;
+}
+
+li>span {
+    text-decoration-line: underline;
+    font-weight: bold;
 }
 
 .tile-2 { background-color: #eee4da; }
