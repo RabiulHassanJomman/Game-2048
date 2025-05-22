@@ -1,7 +1,9 @@
 const gridElement = document.getElementById("grid")
 const gameOver = document.getElementById("game-over-container")
+const wonContainer = document.getElementById("won-container");
 const finalScore = document.getElementById("final-score");
 const scoreCount = document.getElementById("score-count")
+
 let grid;
 let score;
 
@@ -169,6 +171,10 @@ function updateGrid() {
     if (isGameOver()) {
       gameOver.style.visibility = 'visible'
       finalScore.textContent = 'Score: ' + score;
+    }
+    else if(score >= 2048){
+      wonContainer.style.visibility = 'visible';
+      //document.getElementById("restartBtn").style.visibility = 'visible'
     }
   }
 }
