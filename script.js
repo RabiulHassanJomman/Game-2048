@@ -166,25 +166,27 @@ function updateGrid() {
       tile.textContent = grid[i][j] || '';
       gridElement.appendChild(tile)
     }
-    
-    scoreCount.textContent = score;
-    if (isGameOver()) {
-      gameOver.style.visibility = 'visible'
-      finalScore.textContent = 'Score: ' + score;
-    }
-    else if(score >= 2048){
-      wonContainer.style.visibility = 'visible';
-      //document.getElementById("restartBtn").style.visibility = 'visible'
+  }
+  scoreCount.textContent = score;
+  if (isGameOver()) {
+    gameOver.style.visibility = 'visible'
+    finalScore.textContent = 'Score: ' + score;
+  }
+  for (i = 0; i < 4; i++) {
+    for (j = 0; j < 4; j++) {
+      if (grid[i][j] >= 2048) {
+        wonContainer.style.visibility = 'visible';
+      }
     }
   }
 }
 
 function isGameOver() {
-  for(let i = 0; i < 4; i++){
-    for(let j = 0; j < 4; j++){
-      if(grid[i][j] === 0) return false;
-      if(j < 3 && grid[i][j] === grid[i][j + 1]) return false;
-      if(i < 3 && grid[i][j] === grid[i + 1][j]) return false;
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      if (grid[i][j] === 0) return false;
+      if (j < 3 && grid[i][j] === grid[i][j + 1]) return false;
+      if (i < 3 && grid[i][j] === grid[i + 1][j]) return false;
     }
   }
   return true;
@@ -192,6 +194,7 @@ function isGameOver() {
 
 function restartGame() {
   gameOver.style.visibility = 'hidden'
+  wonContainer.style.visibility = 'hidden'
   startGame();
 }
 startGame()
